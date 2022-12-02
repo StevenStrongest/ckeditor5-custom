@@ -14,10 +14,7 @@ import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices.js';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock.js';
-import DataFilter from '@ckeditor/ckeditor5-html-support/src/datafilter.js';
-import DataSchema from '@ckeditor/ckeditor5-html-support/src/dataschema.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
-import FindAndReplace from '@ckeditor/ckeditor5-find-and-replace/src/findandreplace.js';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
@@ -49,6 +46,7 @@ import Mention from '@ckeditor/ckeditor5-mention/src/mention.js';
 import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak.js';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice.js';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting.js';
 import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters.js';
 import SpecialCharactersArrows from '@ckeditor/ckeditor5-special-characters/src/specialcharactersarrows.js';
@@ -68,8 +66,8 @@ import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperti
 import TableColumnResize from '@ckeditor/ckeditor5-table/src/tablecolumnresize.js';
 import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
+import TextPartLanguage from '@ckeditor/ckeditor5-language/src/textpartlanguage.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
-import Title from '@ckeditor/ckeditor5-heading/src/title.js';
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 
@@ -88,10 +86,7 @@ Editor.builtinPlugins = [
 	CloudServices,
 	Code,
 	CodeBlock,
-	DataFilter,
-	DataSchema,
 	Essentials,
-	FindAndReplace,
 	FontBackgroundColor,
 	FontColor,
 	FontFamily,
@@ -123,6 +118,7 @@ Editor.builtinPlugins = [
 	PageBreak,
 	Paragraph,
 	PasteFromOffice,
+	RemoveFormat,
 	SourceEditing,
 	SpecialCharacters,
 	SpecialCharactersArrows,
@@ -142,8 +138,8 @@ Editor.builtinPlugins = [
 	TableColumnResize,
 	TableProperties,
 	TableToolbar,
+	TextPartLanguage,
 	TextTransformation,
-	Title,
 	TodoList,
 	Underline
 ];
@@ -152,46 +148,9 @@ Editor.builtinPlugins = [
 Editor.defaultConfig = {
 	toolbar: {
 		items: [
-			'heading',
-			'fontBackgroundColor',
-			'fontSize',
-			'fontColor',
-			'fontFamily',
-			'style',
-			'|',
 			'bold',
 			'italic',
-			'underline',
-			'subscript',
-			'superscript',
-			'|',
-			'link',
-			'imageUpload',
-			'mediaEmbed',
-			'imageInsert',
-			'|',
-			'blockQuote',
-			'code',
-			'codeBlock',
-			'|',
-			'alignment',
-			'indent',
-			'outdent',
-			'todoList',
-			'numberedList',
-			'bulletedList',
-			'insertTable',
-			'findAndReplace',
-			'highlight',
-			'horizontalLine',
-			'htmlEmbed',
-			'pageBreak',
-			'sourceEditing',
-			'specialCharacters',
-			'restrictedEditingException',
-			'strikethrough',
-			'undo',
-			'redo'
+			'link'
 		]
 	},
 	language: 'en',
